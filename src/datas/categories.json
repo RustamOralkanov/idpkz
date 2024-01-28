@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "Смартфоны",
+        "image_url": "https://example.com/images/smartphones.jpg",
+        "path": "smartphones"
+    },
+    {
+        "id": 2,
+        "name": "Ноутбуки",
+        "image_url": "https://example.com/images/laptops.jpg",
+        "path": "laptops"
+    },
+    {
+        "id": 3,
+        "name": "Фотоаппараты",
+        "image_url": "https://example.com/images/cameras.jpg",
+        "path": "cameras"
+    },
+    {
+        "id": 4,
+        "name": "Телевизоры",
+        "image_url": "https://example.com/images/tvs.jpg",
+        "path": "tvs"
+    },
+    {
+        "id": 5,
+        "name": "Наушники",
+        "image_url": "https://example.com/images/headphones.jpg",
+        "path": "headphones"
+    },
+    {
+        "id": 6,
+        "name": "Игровые консоли",
+        "image_url": "https://example.com/images/gaming_consoles.jpg",
+        "path": "gaming-consoles"
+    },
+    {
+        "id": 7,
+        "name": "Планшеты",
+        "image_url": "https://example.com/images/tablets.jpg",
+        "path": "tablets"
+    },
+    {
+        "id": 8,
+        "name": "Умные часы",
+        "image_url": "https://example.com/images/smartwatches.jpg",
+        "path": "smartwatches"
+    },
+    {
+        "id": 9,
+        "name": "Принтеры",
+        "image_url": "https://example.com/images/printers.jpg",
+        "path": "printers"
+    },
+    {
+        "id": 10,
+        "name": "Камеры видеонаблюдения",
+        "image_url": "https://example.com/images/security_cameras.jpg",
+        "path": "security-cameras"
+    },
+    {
+        "id": 11,
+        "name": "Компьютерные комплектующие",
+        "image_url": "https://example.com/images/computer_components.jpg",
+        "path": "computer-components"
+    },
+    {
+        "id": 12,
+        "name": "Аксессуары для смартфонов",
+        "image_url": "https://example.com/images/smartphone_accessories.jpg",
+        "path": "smartphone-accessories"
+    },
+    {
+        "id": 13,
+        "name": "Игровые аксессуары",
+        "image_url": "https://example.com/images/gaming_accessories.jpg",
+        "path": "gaming-accessories"
+    },
+    {
+        "id": 14,
+        "name": "Мониторы",
+        "image_url": "https://example.com/images/monitors.jpg",
+        "path": "monitors"
+    },
+    {
+        "id": 15,
+        "name": "Электронные книги",
+        "image_url": "https://example.com/images/ebook_readers.jpg",
+        "path": "ebook-readers"
+    },
+    {
+        "id": 16,
+        "name": "Видеокарты",
+        "image_url": "https://example.com/images/gpus.jpg",
+        "path": "gpus"
+    }
+]

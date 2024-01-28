@@ -1,0 +1,29 @@
+{
+    "name": "idpkz-vue",
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite --port 3000 --host",
+        "build": "vite build",
+        "preview": "vite preview --port 4173",
+        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.2",
+        "pinia": "^2.1.7",
+        "sass": "^1.69.7",
+        "swiper": "^10.3.1",
+        "vue": "^2.7.7",
+        "vue-router": "^3.5.4",
+        "vue-slick-carousel": "^1.0.6",
+        "vue-star-rating": "^1.7.0"
+    },
+    "devDependencies": {
+        "@rushstack/eslint-patch": "^1.1.0",
+        "@vitejs/plugin-legacy": "^2.0.0",
+        "@vitejs/plugin-vue2": "^1.1.2",
+        "@vue/eslint-config-prettier": "^7.0.0",
+        "prettier": "^2.5.1",
+        "terser": "^5.14.2",
+        "vite": "^3.0.2"
+    }
+}

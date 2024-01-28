@@ -1,0 +1,102 @@
+[
+    {
+        "img": "https://cdn.evrika.com/storage/products/images/medium/kAweLsoy6V3KJZhsR1Alaw1bkoowhZohQwW8Cn42.jpg.webp?v=1697108414/f_auto",
+        "partNumber": "PN123456",
+        "title": "iPhone 11 Pro Max 256GB Atlas White",
+        "discount": true,
+        "price": 799000,
+        "discountPrice": 699000,
+        "delivery": "Экспресс",
+        "isFavorite": true
+    },
+    {
+        "img": "https://cdn.evrika.com/storage/products/images/medium/kAweLsoy6V3KJZhsR1Alaw1bkoowhZohQwW8Cn42.jpg.webp?v=1697108414/f_auto",
+        "partNumber": "PN789012",
+        "title": "Samsung Galaxy S20",
+        "discount": false,
+        "price": 899000,
+        "discountPrice": 899000,
+        "delivery": "Стандарт",
+        "isFavorite": true
+    },
+    {
+        "img": "https://cdn.evrika.com/storage/products/images/medium/kAweLsoy6V3KJZhsR1Alaw1bkoowhZohQwW8Cn42.jpg.webp?v=1697108414/f_auto",
+        "partNumber": "PN345678",
+        "title": "OnePlus 8T",
+        "discount": true,
+        "price": 749000,
+        "discountPrice": 649000,
+        "delivery": "Экспресс",
+        "isFavorite": false
+    },
+    {
+        "img": "https://cdn.evrika.com/storage/products/images/medium/kAweLsoy6V3KJZhsR1Alaw1bkoowhZohQwW8Cn42.jpg.webp?v=1697108414/f_auto",
+        "partNumber": "PN901234",
+        "title": "Huawei P40",
+        "discount": false,
+        "price": 699000,
+        "discountPrice": 699000,
+        "delivery": "Стандарт",
+        "isFavorite": true
+    },
+    {
+        "img": "https://cdn.evrika.com/storage/products/images/medium/kAweLsoy6V3KJZhsR1Alaw1bkoowhZohQwW8Cn42.jpg.webp?v=1697108414/f_auto",
+        "partNumber": "PN567890",
+        "title": "Google Pixel 5",
+        "discount": true,
+        "price": 799000,
+        "discountPrice": 639000,
+        "delivery": "Экспресс",
+        "isFavorite": false
+    },
+    {
+        "img": "https://cdn.evrika.com/storage/products/images/medium/kAweLsoy6V3KJZhsR1Alaw1bkoowhZohQwW8Cn42.jpg.webp?v=1697108414/f_auto",
+        "partNumber": "PN234567",
+        "title": "Xiaomi Mi 10",
+        "discount": false,
+        "price": 799000,
+        "discountPrice": 799000,
+        "delivery": "Стандарт",
+        "isFavorite": true
+    },
+    {
+        "img": "https://cdn.evrika.com/storage/products/images/medium/kAweLsoy6V3KJZhsR1Alaw1bkoowhZohQwW8Cn42.jpg.webp?v=1697108414/f_auto",
+        "partNumber": "PN890123",
+        "title": "OPPO Find X2",
+        "discount": true,
+        "price": 849000,
+        "discountPrice": 679000,
+        "delivery": "Экспресс",
+        "isFavorite": false
+    },
+    {
+        "img": "https://cdn.evrika.com/storage/products/images/medium/kAweLsoy6V3KJZhsR1Alaw1bkoowhZohQwW8Cn42.jpg.webp?v=1697108414/f_auto",
+        "partNumber": "PN456789",
+        "title": "Sony Xperia 5 II",
+        "discount": false,
+        "price": 899000,
+        "discountPrice": 899000,
+        "delivery": "Стандарт",
+        "isFavorite": true
+    },
+    {
+        "img": "https://cdn.evrika.com/storage/products/images/medium/kAweLsoy6V3KJZhsR1Alaw1bkoowhZohQwW8Cn42.jpg.webp?v=1697108414/f_auto",
+        "partNumber": "PN012345",
+        "title": "Realme 7 Pro",
+        "discount": true,
+        "price": 329000,
+        "discountPrice": 279000,
+        "delivery": "Экспресс",
+        "isFavorite": false
+    },
+    {
+        "img": "https://cdn.evrika.com/storage/products/images/medium/kAweLsoy6V3KJZhsR1Alaw1bkoowhZohQwW8Cn42.jpg.webp?v=1697108414/f_auto",
+        "partNumber": "PN678901",
+        "title": "Vivo X50 Pro",
+        "discount": false,
+        "price": 549000,
+        "discountPrice": 549000,
+        "delivery": "Стандарт",
+        "isFavorite": true
+    }
+]
