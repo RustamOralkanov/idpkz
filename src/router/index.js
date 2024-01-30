@@ -4,6 +4,7 @@ import HomeView from "../views/Home/HomeView.vue";
 import CategoriesView from "../views/Categories/CategoriesView.vue";
 import CategoryView from "../views/Category/CategoryView.vue";
 import ProductView from "../views/Product/ProductView.vue";
+import CartView from "../views/Cart/CartView.vue";
 
 Vue.use(VueRouter);
 
@@ -33,9 +34,17 @@ const router = new VueRouter({
             component: CategoryView,
         },
         {
-            path: "/:product",
+            path: "/product/:product",
             name: "product",
             component: ProductView,
+        },
+        {
+            path: "/cart",
+            name: "cart",
+            component: CartView,
+            meta: {
+                breadcrumb: "Корзина",
+            },
         },
     ],
 });

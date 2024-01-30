@@ -24,7 +24,7 @@
                             <span class="nav-link-badge"></span>
                         </div>
                     </a>
-                    <a href="#" class="nav-link nav-link-cart">
+                    <router-link to="/cart" class="nav-link nav-link-cart">
                         <div class="nav-link-body">
                             <CartIcon />
                             <h5 class="nav-link-title">Корзина</h5>
@@ -45,7 +45,7 @@
                                 Оформить заказ
                             </button>
                         </div>
-                    </a>
+                    </router-link>
                     <a href="#" class="nav-link">
                         <div class="nav-link-body">
                             <UserIcon />
