@@ -5,6 +5,7 @@ import CategoriesView from "../views/Categories/CategoriesView.vue";
 import CategoryView from "../views/Category/CategoryView.vue";
 import ProductView from "../views/Product/ProductView.vue";
 import CartView from "../views/Cart/CartView.vue";
+import PaymentView from "../views/Payment/PaymentView.vue";
 
 Vue.use(VueRouter);
 
@@ -44,6 +45,14 @@ const router = new VueRouter({
             component: CartView,
             meta: {
                 breadcrumb: "Корзина",
+            },
+        },
+        {
+            path: "/payment",
+            name: "payment",
+            component: PaymentView,
+            meta: {
+                breadcrumb: "Оформление заказа",
             },
         },
     ],
