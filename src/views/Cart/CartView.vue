@@ -6,8 +6,27 @@
                 <SectionTitle title="Корзина" />
                 <div @click="$router.go(-1)" class="cart-top-back">Вернутся к покупкам</div>
             </div>
-            <Empty title="Корзина пуста" />
+            <!-- <Empty title="Корзина пуста" /> -->
         </div>
+        <section class="cart">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8">
+                        <div class="cart-wrapper">
+                            <div class="cart-clear">
+                                <button class="cart-clear-btn">
+                                    Очистить корзину
+                                    <DeleteIcon :width="24" :height="24" />
+                                </button>
+                            </div>
+
+                            <CartItem />
+                        </div>
+                    </div>
+                    <div class="col-xl-4"></div>
+                </div>
+            </div>
+        </section>
         <HomeProducts title="Похожие товары" />
         <Recently title="Просмотренные товары" />
     </main>
@@ -23,6 +42,8 @@ export default {
         Recently: () => import('../Layouts/Recently.vue'),
         AlertIcon: () => import('@/components/icons/AlertIcon.vue'),
         Empty: () => import('@/components/Empty.vue'),
+        CartItem: () => import('@/components/cart/CartItem.vue'),
+        DeleteIcon: () => import('@/components/icons/DeleteIcon.vue'),
     }
 }
 </script>
@@ -45,38 +66,25 @@ export default {
         }
     }
 
-    &-empty {
+    &-wrapper {
+        padding: 16px;
         background-color: $white;
         border-radius: $radius;
+    }
+
+    &-clear {
         display: flex;
-        justify-content: center;
         align-items: center;
-        flex-direction: column;
-        gap: 20px;
-        padding: 180px 0;
+        justify-content: flex-end;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $grey;
 
-        &-title {
-            margin-bottom: 0;
-            color: $black;
-            font-size: 40px;
+        &-btn {
+            background: unset;
+            border: unset;
+            color: $red;
+            font-size: 14px;
             font-weight: 500;
-        }
-
-        &-back {
-            color: $dark-grey;
-            font-size: 16px;
-            font-weight: 400;
-            background-color: unset;
-            padding: 16px 32px;
-            border-radius: $radius;
-            border: 1px solid $dark-grey;
-            transition: $transition;
-
-            &:hover {
-                background-color: $green;
-                color: $white;
-                border-color: $green
-            }
         }
     }
 }
