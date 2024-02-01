@@ -25,9 +25,9 @@ export default {
 
 <template>
   <div id="app">
-    <Header v-if="$route.name !== 'payment'" />
-    <Nav v-if="$route.name !== 'payment'" />
-    <PaymentHeader v-if="$route.name === 'payment'" />
+    <Header v-if="$route.name !== 'payment' && $route.name !== 'success'" />
+    <Nav v-if="$route.name !== 'payment' && $route.name !== 'success'" />
+    <PaymentHeader v-if="$route.name === 'payment' || $route.name === 'success'" />
     <router-view />
     <Footer :footer="footerStore" />
   </div>

@@ -5,7 +5,9 @@ import CategoriesView from "../views/Categories/CategoriesView.vue";
 import CategoryView from "../views/Category/CategoryView.vue";
 import ProductView from "../views/Product/ProductView.vue";
 import CartView from "../views/Cart/CartView.vue";
+import FavoriteView from "../views/Favorite/FavoriteView.vue";
 import PaymentView from "../views/Payment/PaymentView.vue";
+import SuccessView from "../views/Success/SuccessView.vue";
 
 Vue.use(VueRouter);
 
@@ -48,12 +50,22 @@ const router = new VueRouter({
             },
         },
         {
+            path: "/favorite",
+            name: "favorite",
+            component: FavoriteView,
+            meta: {
+                breadcrumb: "Избранное",
+            },
+        },
+        {
             path: "/payment",
             name: "payment",
             component: PaymentView,
-            meta: {
-                breadcrumb: "Оформление заказа",
-            },
+        },
+        {
+            path: "/success",
+            name: "success",
+            component: SuccessView,
         },
     ],
 });

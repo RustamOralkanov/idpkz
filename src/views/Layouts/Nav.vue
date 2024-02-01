@@ -17,13 +17,13 @@
                     <input type="text" placeholder="Поиск по сайту" />
                 </div>
                 <div class="nav-links">
-                    <a href="#" class="nav-link">
+                    <router-link to="/favorite" class="nav-link">
                         <div class="nav-link-body">
                             <FavoriteIcon fill="none" />
                             <h5 class="nav-link-title">Избранное</h5>
                             <span class="nav-link-badge"></span>
                         </div>
-                    </a>
+                    </router-link>
                     <router-link to="/cart" class="nav-link nav-link-cart">
                         <div class="nav-link-body">
                             <CartIcon />

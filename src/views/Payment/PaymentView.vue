@@ -55,6 +55,10 @@
                                 <input type="text" id="name" value="г. Алматы, ул. Макатаева 158"
                                     placeholder="Ваш адрес доставки">
                             </div>
+                            <div class="payment-input">
+                                <label for="name">Адрес магазина</label>
+                                <p>г.Алматы, Проспект Райымбека, 200/6</p>
+                            </div>
                         </div>
                         <div class="payment-wrapper">
                             <h3 class="payment-title">Способ оплаты</h3>
@@ -83,6 +87,20 @@
                     <div class="col-xl-4">
                         <div class="payment-wrapper">
                             <h3 class="payment-title">Сумма к оплате</h3>
+                            <div class="payment-price">
+                                <div>4 товара на</div>
+                                <div>1 259 960 ₸</div>
+                            </div>
+                            <div class="payment-price">
+                                <div>Скидка</div>
+                                <div>140 000 ₸</div>
+                            </div>
+                            <div class="payment-total">
+                                <div>К оплате</div>
+                                <div>1 119 960 ₸</div>
+                            </div>
+                            <button class="btn w-100 payment-btn" @click="() => $router.push('/success')">Оформить
+                                покупку</button>
                         </div>
                     </div>
                 </div>
@@ -231,6 +249,7 @@ export default {
             opacity: 0;
 
             &:checked+label::before {
+                transition: $transition;
                 background-color: $green;
             }
         }
@@ -262,6 +281,45 @@ export default {
                 left: 3px;
             }
         }
+    }
+
+    &-price {
+        background-color: $grey;
+        border-radius: $radius;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+
+        div {
+            font-size: 16px;
+
+            &:last-child {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &-total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 16px 0;
+
+        div {
+            font-size: 16px;
+
+            &:last-child {
+                font-size: 22px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &-btn {
+        height: 45px;
     }
 }
 </style>

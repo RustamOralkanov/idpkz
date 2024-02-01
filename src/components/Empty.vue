@@ -2,6 +2,7 @@
     <div class="cart-empty">
         <AlertIcon :width="100" :height="100" fill="#7F7F7F" />
         <h3 class="cart-empty-title">{{ title }}</h3>
+        <p v-show="text.length > 1">{{ text }}</p>
         <button class="cart-empty-back" @click="$router.push('categories')">Перейти в каталог</button>
     </div>
 </template>
@@ -17,6 +18,10 @@ export default {
         title: {
             type: String,
             default: 'Title'
+        },
+        text: {
+            type: String,
+            default: ''
         }
     }
 }
@@ -33,6 +38,11 @@ export default {
         flex-direction: column;
         gap: 20px;
         padding: 180px 0;
+
+        p {
+            margin-bottom: 0;
+            color: $dark-grey;
+        }
 
         &-title {
             margin-bottom: 0;
