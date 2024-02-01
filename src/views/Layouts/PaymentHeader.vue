@@ -29,6 +29,7 @@ export default {
     left: 0;
     width: 100%;
     padding: 10px 0;
+    margin-bottom: 30px;
 
     .container {
         position: relative;
