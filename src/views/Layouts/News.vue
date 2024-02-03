@@ -62,6 +62,8 @@ export default {
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 variableWidth: true,
+                infinite: false,
+                initialSlide: 0,
             },
             news: newsJson
         }
@@ -75,6 +77,14 @@ export default {
         display: flex;
         height: 380px;
         overflow: hidden;
+    }
+}
+
+@media (max-width:991px) {
+    .cards {
+        .news-carousel {
+            height: 330px;
+        }
     }
 }
 </style>

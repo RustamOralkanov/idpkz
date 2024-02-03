@@ -69,4 +69,41 @@ export default {
         }
     }
 }
+
+@media (max-width: 991px) {
+    .brands {
+        &-item {
+            width: calc(33% - 12px);
+            height: 150px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .brands {
+        &-wrapper {
+            gap: 10px;
+        }
+
+        &-item {
+            width: calc(50% - 5px);
+            height: 150px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .brands {
+
+        &-item {
+            height: 100px;
+
+            img {
+                max-height: 60px;
+                height: 100%;
+                max-width: calc(100% - 25%);
+            }
+        }
+    }
+}
 </style>

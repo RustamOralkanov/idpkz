@@ -63,6 +63,8 @@ export default {
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 variableWidth: true,
+                infinite: false,
+                initialSlide: 1,
             },
             products: productsJson
         }
@@ -91,6 +93,30 @@ export default {
 
     .slick-slide {
         margin: 10px;
+    }
+}
+
+@media (max-width:991px) {
+    .cards {
+        .recently-carousel {
+            height: 100px;
+
+            .slick-list {
+                height: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .cards {
+        .recently-carousel {
+            height: 98px;
+
+            .slick-list {
+                height: 98px;
+            }
+        }
     }
 }
 </style>

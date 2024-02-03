@@ -52,4 +52,15 @@ export default {
         z-index: 8;
     }
 }
+
+@media (max-width: 991px) {
+    .banners-button {
+
+        &-prev,
+        &-next {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
 </style>

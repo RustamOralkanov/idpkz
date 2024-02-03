@@ -57,4 +57,32 @@ export default {
         border-radius: $radius;
     }
 }
+
+@media (max-width: 991px) {
+    .seo {
+        p {
+            font-size: 14px;
+        }
+
+        ul {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .seo {
+        p {
+            font-size: 12px;
+        }
+
+        ul {
+            li {
+                font-size: 12px;
+            }
+        }
+    }
+}
 </style>

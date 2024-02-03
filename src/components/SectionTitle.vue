@@ -24,4 +24,12 @@ export default {
         margin-bottom: 0;
     }
 }
+
+@media (max-width: 991px) {
+    .cards {
+        &-title {
+            font-size: 18px;
+        }
+    }
+}
 </style>

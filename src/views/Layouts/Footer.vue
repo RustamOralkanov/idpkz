@@ -213,4 +213,40 @@ export default {
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .footer {
+        .row {
+            gap: 30px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .footer {
+        margin-top: 100px;
+
+        &-title {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        &-list {
+            gap: 12px;
+
+            &-item {
+
+
+                a {
+                    font-size: 14px;
+                }
+
+                &-text {
+                    font-size: 14px;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+}
 </style>

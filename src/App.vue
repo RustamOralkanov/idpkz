@@ -2,31 +2,48 @@
 import Header from '@/views/Layouts/Header.vue';
 import Nav from '@/views/Layouts/Nav.vue'
 import Footer from '@/views/Layouts/Footer.vue'
-import { useFooterStore } from '@/stores/footer'
 import PaymentHeader from './views/Layouts/PaymentHeader.vue';
+
+import { useFooterStore } from '@/stores/footer'
+import { useCategoriesStore } from '@/stores/categories'
+import MobileHeader from './views/Layouts/MobileHeader.vue';
 
 export default {
   components: {
     Header,
     Nav,
     Footer,
-    PaymentHeader
+    PaymentHeader,
+    MobileHeader
   },
   data() {
     return {
       footerStore: null,
+      categoriesStore: null
     };
   },
   created() {
     this.footerStore = useFooterStore();
+    this.categoriesStore = useCategoriesStore();
   },
+  methods: {
+    isMobile() {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
+    }
+  }
 };
 </script>
 
 <template>
   <div id="app">
-    <Header v-if="$route.name !== 'payment' && $route.name !== 'success'" />
-    <Nav v-if="$route.name !== 'payment' && $route.name !== 'success'" />
+    <MobileHeader v-if="isMobile()" />
+    <Header v-if="$route.name !== 'payment' && $route.name !== 'success' && isMobile() === false" />
+    <Nav v-if="$route.name !== 'payment' && $route.name !== 'success' && isMobile() === false"
+      :categories="categoriesStore.categories" />
     <PaymentHeader v-if="$route.name === 'payment' || $route.name === 'success'" />
     <router-view />
     <Footer :footer="footerStore" />

@@ -1,5 +1,5 @@
 <template>
-    <div class="col-xl-9">
+    <div class="col-xxl-9 col-xl-8 col-lg-12 order-xl-2 order-lg-1 order-md-1 order-sm-1 order-1">
         <div class="banners-carousel">
             <VueSlickCarousel :arrows="false" :touchMove="true" :dots="true" ref="carousel">
                 <div class="banners-slide" v-for="banner in banners" :key="banner.id">
@@ -94,6 +94,55 @@ export default {
         display: flex;
         align-items: center;
         gap: 5px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .banners {
+        &-carousel {
+            margin-bottom: 20px;
+            height: 450px;
+        }
+
+        &-slide {
+            height: 450px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .banners {
+        &-carousel {
+            height: 350px;
+        }
+
+        &-slide {
+            height: 350px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .banners {
+        &-carousel {
+            height: 300px;
+        }
+
+        &-slide {
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .banners {
+        &-carousel {
+            height: 250px;
+        }
+
+        &-slide {
+            height: 250px;
+        }
     }
 }
 </style>

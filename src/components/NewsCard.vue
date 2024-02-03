@@ -116,4 +116,67 @@ export default {
         font-size: 14px;
     }
 }
+
+@media (max-width: 1400px) {
+    .news {
+        width: 264px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .news {
+        width: 298px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .news {
+        width: 217px !important;
+
+        &-img {
+            height: 130px;
+            width: 100%;
+            position: relative;
+
+            &-label {
+                font-size: 10px;
+            }
+        }
+
+        &-body {
+            padding: 10px;
+        }
+
+        &-title {
+            color: $black;
+            font-size: 14px;
+            -webkit-line-clamp: 2;
+            height: 36px;
+        }
+
+        &-descr {
+            height: 67px;
+            line-height: 13px;
+            margin-bottom: 16px;
+        }
+
+        &-btn {
+            font-size: 12px;
+            font-weight: 400;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .news {
+        width: 253px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .news {
+        width: 178px !important;
+    }
+}
 </style>

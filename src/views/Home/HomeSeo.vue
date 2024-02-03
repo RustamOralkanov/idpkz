@@ -53,4 +53,45 @@ export default {
         }
     }
 }
+
+@media (max-width: 991px) {
+    .seo {
+
+        &-wrapper {
+            gap: 16px;
+            background-color: $white;
+            border-radius: $radius;
+            padding: 30px;
+        }
+
+        &-main {
+            font-size: 18px;
+
+            &-text {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .seo {
+        margin-top: 0;
+
+        &-wrapper {
+            padding: 16px;
+            gap: 10px;
+        }
+
+        &-main {
+            font-size: 14px;
+            margin-bottom: 0;
+
+            &-text {
+                font-size: 12px;
+                line-height: 1.6;
+            }
+        }
+    }
+}
 </style>

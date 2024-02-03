@@ -6,11 +6,11 @@
                     <img src="../../assets/images/logo.png" alt="logo" />
                 </router-link>
                 <div class="nav-category">
-                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <CatalogIcon :width="24" :height="24" />
+                    <button class="btn" type="button" @click="menuIsActive = !menuIsActive">
+                        <CancelIcon :width="24" :height="24" fill="#ffffff" v-if="menuIsActive" />
+                        <CatalogIcon :width="24" :height="24" v-else />
                         Каталог
                     </button>
-                    <div class="dropdown-menu nav-category-menu"></div>
                 </div>
                 <div class="nav-search">
                     <SearchIcon :width="25" :height="24" />
@@ -55,11 +55,40 @@
                 </div>
             </div>
         </div>
+        <div class="nav-category-menu" v-show="menuIsActive">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="category-wrapper">
+                            <router-link :to="{ name: 'category', params: { category: category.title } }"
+                                class="category-item" v-for="category in categories" :key="category.id">
+                                <img :src="category.img" :alt="category.title">
+                                <h5>{{ category.title }}</h5>
+                                <div class="category-item-subcategories">
+                                    <h4 class="category-item-subcategories-title">{{ category.title }}</h4>
+                                    <div class="category-item-subcategories-wrapper">
+                                        <router-link to="/" class="category-item-subcategories-name"
+                                            v-for="(subcategory, index) in category.subcategories" :key="index">
+                                            {{ subcategory.subtitle }}
+                                        </router-link>
+                                    </div>
+                                </div>
+                            </router-link>
+                            <router-link to="/" class="category-item">
+                                <img src="@/assets/icons/allcategory.svg" alt="Все категорий">
+                                Все категорий
+                            </router-link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 </template>
 
 <script>
 import CartIcon from '../../components/icons/CartIcon.vue';
+import CancelIcon from '../../components/icons/CancelIcon.vue';
 import CatalogIcon from '../../components/icons/CatalogIcon.vue';
 import FavoriteIcon from '../../components/icons/FavoriteIcon.vue';
 import SearchIcon from '../../components/icons/SearchIcon.vue';
@@ -71,16 +100,114 @@ import AlertIcon from '../../components/icons/AlertIcon.vue';
 
 export default {
     name: 'Nav',
-    components: { FavoriteIcon, CartIcon, UserIcon, SearchIcon, CatalogIcon, NavCart, AlertIcon },
+    components: { FavoriteIcon, CartIcon, UserIcon, SearchIcon, CatalogIcon, NavCart, AlertIcon, CancelIcon },
     data() {
         return {
-            products: productsJson
+            products: productsJson,
+            menuIsActive: false
+        }
+    },
+    props: {
+        categories: {
+            type: Array,
+            default() {
+                return []
+            }
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+.category-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 60px;
+    padding: 0;
+    height: calc(100vh - 150px);
+    overflow: auto;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    color: $black;
+    width: 100%;
+    gap: 8px;
+    padding: 8px 0;
+
+    h5 {
+        color: $black;
+        font-weight: 300;
+        font-size: 16px;
+        margin-bottom: 0;
+        transition: $transition;
+    }
+
+    &:last-child {
+        color: $green;
+        font-weight: 500;
+        position: sticky;
+        bottom: 0px;
+        background-color: $grey;
+        padding: 8px 0;
+    }
+
+    &-subcategories {
+        position: absolute;
+        top: 30px;
+        left: 24%;
+        opacity: 0;
+        z-index: -99;
+        transition: $transition;
+        height: 100%;
+        padding: 8px;
+
+        &-wrapper {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        &-name {
+            width: calc(25% - 15px);
+            font-size: 16px;
+            color: $black;
+            transition: $transition;
+
+            &:hover {
+                color: $green;
+            }
+        }
+
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 0;
+            margin-bottom: 24px;
+        }
+    }
+
+    img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
+
+    &:hover {
+
+        h5 {
+            color: unset;
+            font-weight: 600;
+        }
+
+        .category-item-subcategories {
+            opacity: 1;
+            z-index: 9;
+        }
+    }
+}
+
 .nav {
     background-color: $white;
     position: sticky;
@@ -115,9 +242,13 @@ export default {
             top: 80px !important;
             border-radius: 0;
             border: unset;
-            background-color: $red;
+            background-color: $grey;
             width: 100%;
-            height: calc(100vh - 132px);
+            height: calc(100vh - 80px);
+
+            .container {
+                position: relative;
+            }
         }
     }
 

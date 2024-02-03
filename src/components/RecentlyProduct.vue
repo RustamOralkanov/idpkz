@@ -10,7 +10,7 @@
             <h5 class="card-viewed-price">{{ price.toLocaleString() }} ₸</h5>
         </div>
         <div class="card-viewed-favorite" :class="isFavorite ? 'active' : ''">
-            <FavoriteIcon fill="none" :stroke="isFavorite ? '#cd412c' : '#cd412c'" />
+            <FavoriteIcon fill="none" :stroke="isFavorite ? '#cd412c' : '#cd412c'" :width="isMobile() ? 24 : 32" />
         </div>
     </div>
 </template>
@@ -42,6 +42,15 @@ export default {
             type: String,
             default: '#'
         },
+    },
+    methods: {
+        isMobile() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                return true
+            } else {
+                return false
+            }
+        }
     }
 }
 </script>
@@ -133,6 +142,51 @@ export default {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 1400px) {
+    .card {
+        width: 264px !important;
+    }
+}
+
+@media (max-width: 1400px) {
+    .card {
+        width: 298px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .card {
+        width: 338px !important;
+
+        &-viewed {
+            &-img {
+                width: 50px;
+                height: 50px;
+
+                img {
+                    max-width: 50px;
+                }
+            }
+
+            &-title {
+                font-size: 12px;
+                height: 35px;
+            }
+
+            &-price {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        width: 253px !important;
     }
 }
 </style>
