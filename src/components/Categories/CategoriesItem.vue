@@ -6,10 +6,13 @@
         <h4 class="categories-item-title">
             {{ title }}
         </h4>
+        <ChevronIcon class="categories-item-chevron" />
     </router-link>
 </template>
 
 <script>
+import ChevronIcon from '../icons/ChevronIcon.vue';
+
 export default {
     name: 'CategoriesItem',
     props: {
@@ -25,7 +28,8 @@ export default {
             type: String,
             default: 'Path'
         }
-    }
+    },
+    components: { ChevronIcon }
 }
 </script>
 
@@ -59,6 +63,65 @@ export default {
         max-height: 150px;
         width: auto;
         height: 100%;
+    }
+
+    &-chevron {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .categories-item {
+        width: calc(33% - 12px);
+    }
+}
+
+@media (max-width: 767px) {
+    .categories-item {
+        width: calc(50% - 10px);
+
+        &-img {
+            max-height: 120px;
+            width: auto;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .categories-item {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: fit-content;
+        padding: 10px 20px;
+        position: relative;
+
+        &-img {
+            max-height: 40px;
+            width: 40px;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &-chevron {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: rotate(90deg) translateX(-50%);
+        }
     }
 }
 </style>

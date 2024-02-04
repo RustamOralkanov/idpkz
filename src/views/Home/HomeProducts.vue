@@ -63,7 +63,6 @@ export default {
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 variableWidth: true,
-                infinite: false,
             },
             products: productsJson
         }
@@ -101,6 +100,17 @@ export default {
     }
 }
 
+@media (max-width: 1200px) {
+    .cards {
+        &-carousel {
+
+            .slick-list {
+                height: 525px;
+            }
+        }
+    }
+}
+
 @media (max-width: 991px) {
     .cards {
         &-top {
@@ -110,7 +120,7 @@ export default {
         &-carousel {
 
             .slick-list {
-                height: 485px;
+                height: 470px;
             }
         }
     }

@@ -7,6 +7,7 @@ import PaymentHeader from './views/Layouts/PaymentHeader.vue';
 import { useFooterStore } from '@/stores/footer'
 import { useCategoriesStore } from '@/stores/categories'
 import MobileHeader from './views/Layouts/MobileHeader.vue';
+import MobileNav from './views/Layouts/MobileNav.vue';
 
 export default {
   components: {
@@ -14,7 +15,8 @@ export default {
     Nav,
     Footer,
     PaymentHeader,
-    MobileHeader
+    MobileHeader,
+    MobileNav
   },
   data() {
     return {
@@ -44,6 +46,7 @@ export default {
     <Header v-if="$route.name !== 'payment' && $route.name !== 'success' && isMobile() === false" />
     <Nav v-if="$route.name !== 'payment' && $route.name !== 'success' && isMobile() === false"
       :categories="categoriesStore.categories" />
+    <MobileNav v-if="isMobile()" />
     <PaymentHeader v-if="$route.name === 'payment' || $route.name === 'success'" />
     <router-view />
     <Footer :footer="footerStore" />

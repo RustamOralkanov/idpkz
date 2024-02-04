@@ -17,4 +17,10 @@ export default {
     gap: 20px;
     margin-top: 40px;
 }
+
+@media (max-width: 576px) {
+    .categories-wrapper {
+        gap: 8px;
+    }
+}
 </style>
