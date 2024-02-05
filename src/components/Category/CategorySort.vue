@@ -26,8 +26,12 @@
 </template>
 
 <script>
+import SortIcon from '../icons/SortIcon.vue';
 export default {
-    name: "CategorySort"
+    name: "CategorySort",
+    components: {
+        SortIcon
+    }
 }
 </script>
 

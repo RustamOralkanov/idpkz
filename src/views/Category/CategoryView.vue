@@ -14,18 +14,28 @@
             </ul>
 
             <div class="row">
-                <div class="col-xl-3">
-                    <CategoryFilter />
+                <div class="col-xxl-3 col-xl-3 col-lg-12">
+                    <CategoryFilter class="mobile-filter" />
                 </div>
-                <div class="col-xl-9">
-                    <SectionTitle :title="pageProductName.charAt(0).toUpperCase() + pageProductName.slice(1)" />
-                    <div class="category-product-count">Найдено {{ products.length }} товара</div>
-                    <CategorySort />
+                <div class="col-xxl-9 col-xl-9 col-lg-12">
+                    <div class="category-top">
+                        <SectionTitle :title="pageProductName.charAt(0).toUpperCase() + pageProductName.slice(1)" />
+                        <div class="category-product-count">Найдено {{ products.length }} товара</div>
+                        <CategorySort class="mobile-hide" />
+                        <div class="category-mobile-actions">
+                            <button class="btn sort-icon">
+                                <SortIcon :width="16" :height="16" />
+                            </button>
+                            <button class="btn sort-icon">
+                                <FilterIcon :width="16" :height="16" />
+                            </button>
+                        </div>
+                    </div>
                     <CategoryWrapper>
-                        <ProductCard v-for="(product, index) in products" :key="index" :img="product.img"
+                        <ProductCard v-for="( product, index ) in  products " :key="index" :img="product.img"
                             :part-number="product.partNumber" :title="product.title" :old-price="product.discountPrice"
                             :price="product.price" :delivery="product.delivery" :is-favorite="product.isFavorite"
-                            :discount=product.discount />
+                            :discount=product.discount :isMobileCardActive="true" />
                     </CategoryWrapper>
                     <Pagination />
 
@@ -40,6 +50,9 @@
 
 <script>
 import productsJson from '@/datas/products.json'
+import SortIcon from '../../components/icons/SortIcon.vue';
+import FilterIcon from '../../components/icons/FilterIcon.vue';
+
 export default {
     name: 'CategoryView',
     components: {
@@ -51,6 +64,8 @@ export default {
         CategorySort: () => import('@/components/Category/CategorySort.vue'),
         Recently: () => import('@/views/Layouts/Recently.vue'),
         SeoText: () => import('@/views/Layouts/SeoText.vue'),
+        SortIcon,
+        FilterIcon
     },
     data() {
         return {
@@ -68,6 +83,64 @@ export default {
         &-count {
             margin: 16px 0;
         }
+    }
+
+    &-top {
+        position: relative;
+    }
+
+    &-mobile {
+        &-actions {
+            display: none;
+            gap: 5px;
+            align-items: center;
+        }
+    }
+}
+
+.sort-icon {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    border-radius: $radius;
+    border: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+@media (max-width: 1199px) {
+    .category {
+        &-product {
+            &-count {
+                margin: 8px 0;
+                font-size: 12px;
+            }
+        }
+
+        &-mobile {
+            &-actions {
+                display: flex;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-top {}
+    }
+
+    .mobile-filter {
+        position: fixed;
+        z-index: 10;
+        max-width: 450px;
+        height: 600px;
+        overflow: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
     }
 }
 </style>

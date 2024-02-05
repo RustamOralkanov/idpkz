@@ -130,8 +130,28 @@ $shadow: 0px 9px 10px 0px rgba(0, 0, 0, 0.15);
     }
 }
 
+@media (max-width: 1199px) {
+    .mobile-hide {
+        display: none !important;
+    }
+}
+
 @media (max-width: 991px) {
     .mt-90 {
         margin-top: 50px;
+    }
+
+    .breadcrumbs {
+        padding: 16px 0px;
+
+        .router-link-active,
+        span,
+        .breadcrumb {
+            font-size: 10px;
+
+            a {
+                font-size: 10px;
+            }
+        }
     }
 }

@@ -225,6 +225,7 @@ export default {
 @media (max-width: 991px) {
     .footer {
         margin-top: 100px;
+        padding-bottom: 70px;
 
         &-title {
             font-size: 16px;

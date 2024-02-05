@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <div class="card-inner">
+        <div class="card-inner" :class="isMobileCardActive ? 'mobile-card' : undefined">
             <router-link :to="{ name: 'product', params: { product: title } }" class=" card-image">
                 <img :src="img" :alt="title" />
             </router-link>
@@ -70,6 +70,10 @@ export default {
         },
         delivery: String,
         isFavorite: Boolean,
+        isMobileCardActive: {
+            type: Boolean,
+            default: false
+        }
     },
     components: { FavoriteIcon },
 }
@@ -105,6 +109,7 @@ export default {
         img {
             display: block;
             max-height: 200px;
+            width: 100%;
             height: 100%;
             margin: 0 auto;
             object-fit: contain;
@@ -473,6 +478,49 @@ export default {
 @media (max-width: 576px) {
     .card {
         width: 178px !important;
+
+        .mobile-card {
+            flex-direction: row;
+
+            .card {
+                &-image {
+                    width: 130px;
+                    height: 100%;
+                    flex: 0 0 130px;
+                    margin-bottom: 0;
+                }
+
+                &-body {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px 0;
+                }
+
+                &-partnumber {
+                    order: 2
+                }
+
+                &-name {
+                    order: 1;
+                    padding-right: 30px;
+                }
+
+                &-prices {
+                    order: 3;
+                    flex-direction: row;
+                    gap: 8px;
+                    align-items: center;
+                }
+
+                &-delivery {
+                    order: 4;
+                }
+
+                &-btn {
+                    order: 5;
+                }
+            }
+        }
     }
 }
 </style>

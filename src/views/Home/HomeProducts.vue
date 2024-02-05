@@ -146,4 +146,15 @@ export default {
         }
     }
 }
+
+@media (max-width: 576px) {
+    .cards {
+        &-carousel {
+
+            .slick-list {
+                height: 395px;
+            }
+        }
+    }
+}
 </style>

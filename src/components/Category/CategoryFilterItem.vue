@@ -3,7 +3,7 @@
         <div class="filter-item-title" type="button" data-bs-toggle="collapse" :data-bs-target="`#collapseExample-${id}`"
             aria-expanded="false" aria-controls="collapseExample">
             Цена
-            <ChevronIcon />
+            <ChevronIcon class="chevron" />
         </div>
 
         <div class="collapse" :id="`collapseExample-${id}`">
@@ -37,6 +37,11 @@ export default {
 .filter-item {
     border-bottom: 1px solid $dark-grey;
 
+    .chevron {
+        transform: rotate(180deg);
+        transition: $transition;
+    }
+
     &-title {
         width: 100%;
         display: flex;
@@ -46,6 +51,14 @@ export default {
         color: $black;
         font-size: 18px;
         font-weight: 700;
+
+        &[aria-expanded='true'] {
+
+
+            .chevron {
+                transform: rotate(0deg);
+            }
+        }
     }
 
     &-body {

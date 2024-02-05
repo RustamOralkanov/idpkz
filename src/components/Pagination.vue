@@ -87,4 +87,24 @@ export default {
         }
     }
 }
+
+@media (max-width: 991px) {
+    .pagination {
+        padding: 10px;
+        margin-top: 24px;
+
+        &-list {
+            gap: 5px;
+
+            .page-item {
+                width: 30px;
+                height: 30px;
+            }
+
+            .page-link {
+                font-size: 14px;
+            }
+        }
+    }
+}
 </style>

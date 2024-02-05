@@ -20,4 +20,24 @@ export default {
         width: calc(25% - 15px) !important;
     }
 }
+
+@media (max-width: 767px) {
+    .category-wrapper {
+        gap: 10px;
+
+        .card {
+            width: calc(33% - 6px) !important;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .category-wrapper {
+        gap: 10px;
+
+        .card {
+            width: 100% !important;
+        }
+    }
+}
 </style>
