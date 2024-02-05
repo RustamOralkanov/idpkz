@@ -56,4 +56,15 @@ export default {
         color: $black;
     }
 }
+
+@media (max-width: 991px) {
+    .breadcrumbs {
+        padding: 16px 0;
+
+        .router-link-active,
+        span {
+            font-size: 10px;
+        }
+    }
+}
 </style>
