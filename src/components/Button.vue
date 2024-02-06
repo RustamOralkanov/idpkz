@@ -42,6 +42,13 @@ export default {
     align-items: center;
     justify-content: center;
     border: 1px solid $grey;
-    cursor: pointer
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+        background-color: $yellow;
+        color: $white !important;
+        border-color: $yellow !important;
+    }
 }
 </style>

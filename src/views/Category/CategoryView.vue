@@ -15,7 +15,7 @@
 
             <div class="row">
                 <div class="col-xxl-3 col-xl-3 col-lg-12">
-                    <CategoryFilter class="mobile-filter" />
+                    <CategoryFilter class="mobile-filter" :class="isFilterActive ? 'active' : undefined" />
                 </div>
                 <div class="col-xxl-9 col-xl-9 col-lg-12">
                     <div class="category-top">
@@ -26,7 +26,7 @@
                             <button class="btn sort-icon">
                                 <SortIcon :width="16" :height="16" />
                             </button>
-                            <button class="btn sort-icon">
+                            <button class="btn sort-icon" @click="isFilterActive = !isFilterActive">
                                 <FilterIcon :width="16" :height="16" />
                             </button>
                         </div>
@@ -70,7 +70,8 @@ export default {
     data() {
         return {
             pageProductName: this.$route.params.category,
-            products: productsJson
+            products: productsJson,
+            isFilterActive: false
         }
     }
 
@@ -136,11 +137,16 @@ export default {
         position: fixed;
         z-index: 10;
         max-width: 450px;
-        height: 600px;
+        height: 100vh;
         overflow: auto;
         bottom: 0;
-        left: 0;
+        left: -1000px;
         width: 100%;
+        transition: $transition;
+
+        &.active {
+            left: 0;
+        }
     }
 }
 </style>
