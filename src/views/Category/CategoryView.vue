@@ -129,8 +129,6 @@ export default {
                 transform: translateY(-50%);
             }
         }
-
-        &-top {}
     }
 
     .mobile-filter {
@@ -139,7 +137,7 @@ export default {
         max-width: 450px;
         height: 100vh;
         overflow: auto;
-        bottom: 0;
+        top: 0;
         left: -1000px;
         width: 100%;
         transition: $transition;

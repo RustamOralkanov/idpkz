@@ -79,6 +79,7 @@ export default {
                 width: 24px;
                 height: 24px;
                 border-radius: 0;
+                opacity: 0;
 
                 &:checked+label::after {
                     background-color: $green;
@@ -104,6 +105,39 @@ export default {
                     width: 24px;
                     height: 24px;
                     border: 1px solid $black;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .filter-item {
+        border-bottom: 1px solid $dark-grey;
+
+        .chevron {
+            width: 16px;
+            height: 16px;
+        }
+
+        &-title {
+            font-size: 16px;
+            padding: 10px 8px;
+        }
+
+        &-body {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 16px 0 24px;
+            padding: 0 8px;
+            height: 200px;
+            overflow: auto;
+
+            .input-group {
+
+                label {
+                    font-size: 14px;
                 }
             }
         }

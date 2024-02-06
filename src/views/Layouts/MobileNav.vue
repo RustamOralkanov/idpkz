@@ -7,7 +7,8 @@
                     Главная
                 </router-link>
                 <router-link to="/categories" class="nav-mobile-item">
-                    <CatalogIcon :width="24" :height="24" :fill="$route.name === 'categories' ? '#3ab54a' : 'black'" />
+                    <CatalogIcon :width="24" :height="24"
+                        :fill="$route.name === 'categories' || 'category' ? '#3ab54a' : 'black'" />
                     Каталог
                 </router-link>
                 <router-link to="/cart" class="nav-mobile-item">

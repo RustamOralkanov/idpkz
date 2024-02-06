@@ -49,6 +49,58 @@
                                         <div class="product-info-stars">
                                             <star-rating :star-size="24" :show-rating="false" :rating="3" />
                                         </div>
+                                        <!-- ///// -->
+                                        <div class="product-actions desktop-hide">
+                                            <div class="product-actions-id">Код: ID79342</div>
+                                            <div class="product-actions-price">
+                                                Цена
+                                                <div class="prices">
+                                                    <div class="old">314 990 ₸</div>
+                                                    <div class="new">279 990 ₸</div>
+                                                </div>
+                                            </div>
+                                            <div class="product-actions-count">
+                                                Количество
+                                                <div class="counter">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                        viewBox="0 0 30 30" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M7.5 2.5H22.5C25.2614 2.5 27.5 4.73858 27.5 7.5V22.5C27.5 25.2614 25.2614 27.5 22.5 27.5H7.5C4.73858 27.5 2.5 25.2614 2.5 22.5V7.5C2.5 4.73858 4.73858 2.5 7.5 2.5ZM24.7097 24.7097C25.2958 24.1237 25.625 23.3288 25.625 22.5V7.5C25.625 6.6712 25.2958 5.87634 24.7097 5.29029C24.1237 4.70424 23.3288 4.375 22.5 4.375H7.5C5.77411 4.375 4.375 5.77411 4.375 7.5V22.5C4.375 23.3288 4.70424 24.1237 5.29029 24.7097C5.87634 25.2958 6.6712 25.625 7.5 25.625H22.5C23.3288 25.625 24.1237 25.2958 24.7097 24.7097Z"
+                                                            fill="black" />
+                                                        <path
+                                                            d="M20.3 14.0625H9.7C9.18223 14.0625 8.7625 14.4822 8.7625 15C8.7625 15.5178 9.18223 15.9375 9.7 15.9375H20.3C20.8178 15.9375 21.2375 15.5178 21.2375 15C21.2375 14.4822 20.8178 14.0625 20.3 14.0625Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                    <input type="number" value="1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                        viewBox="0 0 30 30" fill="none">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M7.5 2.5H22.5C25.2614 2.5 27.5 4.73858 27.5 7.5V22.5C27.5 25.2614 25.2614 27.5 22.5 27.5H7.5C4.73858 27.5 2.5 25.2614 2.5 22.5V7.5C2.5 4.73858 4.73858 2.5 7.5 2.5ZM24.6302 24.6302C25.1951 24.0652 25.5125 23.299 25.5125 22.5V7.5C25.5125 6.70104 25.1951 5.93479 24.6302 5.36984C24.0652 4.80489 23.299 4.4875 22.5 4.4875H7.5C5.83624 4.4875 4.4875 5.83624 4.4875 7.5V22.5C4.4875 23.299 4.80489 24.0652 5.36984 24.6302C5.9348 25.1951 6.70104 25.5125 7.5 25.5125H22.5C23.299 25.5125 24.0652 25.1951 24.6302 24.6302Z"
+                                                            fill="black" />
+                                                        <path
+                                                            d="M20 14.0625H15.9375V10C15.9375 9.48223 15.5178 9.0625 15 9.0625C14.4822 9.0625 14.0625 9.48223 14.0625 10V14.0625H10C9.48223 14.0625 9.0625 14.4822 9.0625 15C9.0625 15.5178 9.48223 15.9375 10 15.9375H14.0625V20C14.0625 20.5178 14.4822 20.9375 15 20.9375C15.5178 20.9375 15.9375 20.5178 15.9375 20V15.9375H20C20.5178 15.9375 20.9375 15.5178 20.9375 15C20.9375 14.4822 20.5178 14.0625 20 14.0625Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="product-actions-info">
+                                                <div>
+                                                    <DeliveryIcon :width="24" :height="24" />
+                                                    Доставка: завтра
+                                                </div>
+                                                <div>
+                                                    <PackIcon :width="24" :height="24" />
+                                                    Есть на складе
+                                                </div>
+                                            </div>
+                                            <div class="product-actions-btns">
+                                                <button class="btn product-actions-btn">Добавить в корзину</button>
+                                                <button class="favorite">
+                                                    <FavoriteIcon :width="24" :height="24" fill="none" stroke="#3ab54a" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- ///// -->
                                         <div class="product-info-characteristics">
                                             <h3 class="product-info-characteristics-title">Характеристики</h3>
                                             <div class="product-info-characteristics-descr">
@@ -88,7 +140,7 @@
                         </div>
                     </div>
                     <div class="col-xl-4">
-                        <div class="product-actions bg">
+                        <div class="product-actions bg mobile-hide">
                             <div class="product-actions-id">Код: ID79342</div>
                             <div class="product-actions-price">
                                 Цена
@@ -544,6 +596,157 @@ export default {
         flex-direction: column;
         height: 100%;
         position: relative;
+    }
+}
+
+@media (max-width: 1400px) {
+    .product-info {
+        &-descr {
+            font-size: 12px;
+            line-height: 120%;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .product-info {
+        .bg {
+            padding: 16px;
+        }
+
+        &-articul {
+            margin-bottom: 16px;
+        }
+
+        &-name {
+            font-size: 16px;
+        }
+
+        &-images {
+
+            &-labels {
+                top: 10px;
+                left: 10px;
+            }
+
+            &-label {
+                padding: 2px 8px;
+                font-size: 12px;
+                font-weight: 300;
+            }
+
+            &-main {
+
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &-thumbnails {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+
+        &-thumbnail {
+            max-width: 100px;
+            width: 100%;
+            max-height: 100%;
+            height: 100%;
+            border-radius: $radius;
+            border: 1px solid $grey;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-stars {
+            margin-bottom: 24px;
+        }
+
+        &-characteristics {
+            &-title {
+                font-size: 18px;
+            }
+
+            &-descr {
+                gap: 8px;
+
+                .item {
+                    font-size: 14px;
+                    margin-bottom: 0;
+
+                    &-accent {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &-all {
+                margin-top: 16px;
+            }
+        }
+
+        &-descr {
+            position: unset;
+            margin-top: 30px;
+        }
+    }
+
+    .product-actions {
+        gap: 10px;
+        margin-bottom: 30px;
+
+        &-id {
+            font-size: 12px;
+            padding-bottom: 10px;
+        }
+
+        &-price,
+        &-count {
+            font-size: 18px;
+        }
+
+        &-price {
+            .prices {
+                gap: 5px;
+
+                .old {
+                    font-size: 16px;
+                }
+
+                .new {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &-info {
+            gap: 4px;
+
+            div {
+                gap: 5px;
+            }
+        }
+
+        &-btns {
+
+            .favorite {
+                width: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                transition: $transition;
+            }
+        }
     }
 }
 </style>
