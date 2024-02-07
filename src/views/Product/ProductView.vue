@@ -216,7 +216,7 @@
                             своему рабочему столу. А с помощью технологии быстрой зарядки аккумулятор можно зарядить на 80 %
                             всего за час — например, во время обеда. Работайте в любое время и в любом месте!</p>
                         <div class="row" :style="{ marginTop: 30 + 'px' }">
-                            <div class="col-xl-6 product-characteristic" v-for="item in 24">
+                            <div class="col-xl-6 product-characteristic" v-for="item in 18">
                                 <div>Диагональ дисплея, дюйм:</div>
                                 <div>15.6</div>
                             </div>
@@ -701,7 +701,7 @@ export default {
     }
 
     .product-actions {
-        gap: 10px;
+        gap: 14px;
         margin-bottom: 30px;
 
         &-id {
@@ -746,6 +746,13 @@ export default {
                 padding: 0;
                 transition: $transition;
             }
+        }
+    }
+
+    .product-characteristic {
+
+        div {
+            font-size: 14px;
         }
     }
 }

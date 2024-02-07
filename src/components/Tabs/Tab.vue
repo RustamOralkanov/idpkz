@@ -30,5 +30,15 @@ export default {
         padding: 30px;
     }
 }
+
+@media (max-width: 1199px) {
+    .tab {
+        &-body {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
 </style>
   
