@@ -11,7 +11,7 @@
         <section class="cart">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-8">
+                    <div class="col-xxl-8 col-xl-8 col-lg-12 mb-xl-0 mb-lg-4 mb-md-4 mb-4">
                         <div class="cart-wrapper">
                             <div class="cart-clear">
                                 <button class="cart-clear-btn">
@@ -23,7 +23,7 @@
                             <CartItem v-for="(item, index) in 5" :key="index" />
                         </div>
                     </div>
-                    <div class="col-xl-4">
+                    <div class="col-xxl-4 col-xl-4 col-lg-12">
                         <div class="cart-payment">
                             <SectionTitle title="Сумма к оплате" />
                             <div class="cart-payment-body">
@@ -177,6 +177,70 @@ export default {
 
             .login {
                 color: $red;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .cart {
+        &-top {
+            margin-bottom: 16px;
+
+            &-back {
+                font-size: 14px;
+            }
+        }
+
+        &-wrapper {
+            padding: 16px 8px 8px;
+        }
+
+        &-clear {
+
+            &-btn {
+                font-size: 12px;
+            }
+        }
+
+        &-payment {
+            background-color: $white;
+            padding: 16px;
+            border-radius: $radius;
+
+            &-item,
+            &-sum {
+
+                &:not(.cart-payment-sum) {
+                    padding: 11px 10px;
+                }
+
+                div {
+                    &:first-child {
+                        font-size: 16px;
+                    }
+
+                    &:last-child {
+                        color: $black;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            &-sum {
+                div {
+                    &:last-child {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            &-btn {
+                height: 45px;
+            }
+
+            &-login {
+                font-size: 12px;
             }
         }
     }

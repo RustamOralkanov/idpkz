@@ -42,7 +42,7 @@ export default {
 
 <template>
   <div id="app">
-    <MobileHeader v-if="isMobile()" />
+    <MobileHeader v-if="isMobile() && $route.name !== 'payment' && $route.name !== 'success'" />
     <Header v-if="$route.name !== 'payment' && $route.name !== 'success' && isMobile() === false" />
     <Nav v-if="$route.name !== 'payment' && $route.name !== 'success' && isMobile() === false"
       :categories="categoriesStore.categories" />

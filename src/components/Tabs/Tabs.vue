@@ -51,6 +51,7 @@ export default {
             transition: $transition;
             font-size: 16px;
             font-weight: 400;
+            color: $black;
 
             &.active {
                 background-color: $green;

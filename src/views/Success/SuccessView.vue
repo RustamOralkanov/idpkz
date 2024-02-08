@@ -42,7 +42,31 @@ export default {
 
     &-title {
         margin-bottom: 0;
+        text-align: center;
         font-size: 40px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 0;
+        color: $dark-grey;
+        text-align: center;
+    }
+}
+
+.success {
+    &-wrapper {
+        padding: 130px 20px;
+
+        svg {
+            border: 6px solid $green;
+            border-radius: 50%;
+            padding: 10px;
+        }
+    }
+
+    &-title {
+        font-size: 32px;
     }
 
     p {

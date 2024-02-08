@@ -30,6 +30,8 @@ export default {
     width: 100%;
     padding: 10px 0;
     margin-bottom: 30px;
+    z-index: 99;
+    box-shadow: $shadow;
 
     .container {
         position: relative;
@@ -60,6 +62,35 @@ export default {
 
         svg {
             transform: rotate(-90deg);
+        }
+    }
+}
+
+@media (max-width:991px) {
+
+    .payment-header {
+
+        &-logo {
+            height: 30px;
+            width: fit-content;
+            margin: 0 0 0 auto;
+            cursor: pointer;
+
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+
+        &-back {
+            gap: 8px;
+            font-size: 12px;
+            left: 12px;
+
+            svg {
+                width: 18px;
+                height: 18px;
+            }
         }
     }
 }

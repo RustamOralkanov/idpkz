@@ -1,7 +1,8 @@
 <template>
     <div class="cart-item">
         <router-link :to="{ name: 'product', params: { product: 'title' } }" class="cart-item-img">
-            <img src="../../assets/images/no-image.png" alt="image">
+            <img src="https://www.technodom.kz/_next/image?url=https%3A%2F%2Fapi.technodom.kz%2Ff3%2Fapi%2Fv1%2Fimages%2F800%2F800%2F228942_2.jpg&w=1920&q=85"
+                alt="image">
             <div class="cart-item-label">Скидка</div>
         </router-link>
         <div class="cart-item-body">
@@ -14,8 +15,8 @@
             </div>
         </div>
         <div class="cart-item-actions">
-            <div class="cart-item-favorite">
-                <FavoriteIcon stroke="#7F7F7F" fill="none" />
+            <div class="cart-item-favorite" :class="isFavorite ? 'active' : ''">
+                <FavoriteIcon :stroke="isFavorite ? '#cd412c' : '#7F7F7F'" fill="none" />
             </div>
             <div class="counter">
                 <MinusIcon fill="#7F7F7F" :height="30" :width="30" />
@@ -33,6 +34,12 @@ export default {
         FavoriteIcon: () => import('@/components/icons/FavoriteIcon.vue'),
         MinusIcon: () => import('@/components/icons/MinusIcon.vue'),
         PlusIcon: () => import('@/components/icons/PlusIcon.vue'),
+    },
+    props: {
+        isFavorite: {
+            type: Boolean,
+            default: true,
+        }
     }
 }
 </script>
@@ -43,6 +50,7 @@ export default {
     gap: 20px;
     border-bottom: 1px dashed $grey;
     margin-bottom: 16px;
+    padding-bottom: 16px;
 
     &:last-child {
         border-bottom: unset;
@@ -53,9 +61,11 @@ export default {
         position: relative;
         width: 150px;
         height: 150px;
+        display: flex;
+        flex: 1 0 auto;
 
         img {
-            width: auto;
+            width: 100%;
             height: 100%;
             display: block;
             margin: 0 auto;
@@ -123,7 +133,6 @@ export default {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        padding: 16px 0;
 
         .counter {
             background-color: unset;
@@ -134,6 +143,7 @@ export default {
                 font-weight: 700;
                 width: 45px;
             }
+
         }
     }
 
@@ -158,6 +168,82 @@ export default {
                 path {
                     stroke: $red !important;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .cart-item {
+        gap: 8px;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+
+        &-img {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            padding: 5px 0;
+        }
+
+        &-label {
+            font-size: 10px;
+            padding: 2px 6px;
+        }
+
+        &-title {
+            font-size: 14px;
+            font-weight: 500;
+            height: 33px;
+        }
+
+        &-body {
+            padding: 4px 0;
+        }
+
+        &-prices {
+            flex-direction: row;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 0px;
+
+            .new {
+                font-size: 16px;
+                line-height: 1;
+            }
+
+            .old {
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+
+        &-actions {
+            padding: 0;
+
+            .counter {
+
+                input {
+                    color: $dark-grey;
+                    font-size: 14px;
+                    font-weight: 700;
+                    width: 30px;
+                }
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+
+        &-favorite {
+            cursor: pointer;
+            transition: $transition;
+
+            svg {
+                width: 24px;
+                height: 24px;
             }
         }
     }

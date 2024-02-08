@@ -322,4 +322,57 @@ export default {
         height: 45px;
     }
 }
+
+@media (max-width:991px) {
+    .payment {
+        &-group {
+            margin-top: 30px;
+        }
+
+        &-title {
+            font-size: 16px;
+        }
+
+        &-options {
+
+            .option {
+                font-size: 14px;
+                height: 38px;
+            }
+        }
+
+        &-radio {
+            gap: 10px;
+            margin-bottom: 10px;
+
+            label {
+                line-height: 1;
+                font-size: 14px;
+            }
+        }
+
+        &-price {
+            padding: 11px 10px;
+
+            div {
+                font-size: 14px;
+
+                &:last-child {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-total {
+
+            div {
+                font-size: 16px;
+
+                &:last-child {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
 </style>

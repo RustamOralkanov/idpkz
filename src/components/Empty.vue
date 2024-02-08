@@ -69,4 +69,27 @@ export default {
         }
     }
 }
+
+@media (max-width: 991px) {
+    .cart {
+        &-empty {
+            padding: 130px 20px;
+
+            p {
+                text-align: left;
+            }
+
+            &-title {
+                text-align: center;
+                font-size: 32px;
+            }
+
+            &-back {
+                padding: 12px 32px;
+                text-align: center;
+            }
+        }
+    }
+
+}
 </style>

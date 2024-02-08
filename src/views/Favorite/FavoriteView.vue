@@ -14,7 +14,7 @@
                     <ProductCard v-for="(product, index) in products" :key="index" :img="product.img"
                         :part-number="product.partNumber" :title="product.title" :old-price="product.discountPrice"
                         :price="product.price" :delivery="product.delivery" :is-favorite="product.isFavorite"
-                        :discount=product.discount />
+                        :discount=product.discount :isMobileCardActive="true" />
                 </CategoryWrapper>
             </div>
         </section>
@@ -152,6 +152,70 @@ export default {
 
             .login {
                 color: $red;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .cart {
+        &-top {
+            margin-bottom: 16px;
+
+            &-back {
+                font-size: 14px;
+            }
+        }
+
+        &-wrapper {
+            padding: 16px 8px 8px;
+        }
+
+        &-clear {
+
+            &-btn {
+                font-size: 12px;
+            }
+        }
+
+        &-payment {
+            background-color: $white;
+            padding: 16px;
+            border-radius: $radius;
+
+            &-item,
+            &-sum {
+
+                &:not(.cart-payment-sum) {
+                    padding: 11px 10px;
+                }
+
+                div {
+                    &:first-child {
+                        font-size: 16px;
+                    }
+
+                    &:last-child {
+                        color: $black;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            &-sum {
+                div {
+                    &:last-child {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            &-btn {
+                height: 45px;
+            }
+
+            &-login {
+                font-size: 12px;
             }
         }
     }

@@ -40,5 +40,13 @@ export default {
         }
     }
 }
+
+@media (max-width: 576px) {
+    .tab {
+        &-body {
+            padding: 20px;
+        }
+    }
+}
 </style>
   
