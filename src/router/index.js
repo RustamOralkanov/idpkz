@@ -8,6 +8,7 @@ import CartView from "../views/Cart/CartView.vue";
 import FavoriteView from "../views/Favorite/FavoriteView.vue";
 import PaymentView from "../views/Payment/PaymentView.vue";
 import SuccessView from "../views/Success/SuccessView.vue";
+import AuthView from "../views/Auth/AuthView.vue";
 
 Vue.use(VueRouter);
 
@@ -66,6 +67,11 @@ const router = new VueRouter({
             path: "/success",
             name: "success",
             component: SuccessView,
+        },
+        {
+            path: "/auth",
+            name: "auth",
+            component: AuthView,
         },
     ],
 });

@@ -78,7 +78,6 @@ export default {
 
 @media (max-width: 420px) {
     .tab {
-        &-wrapper {}
 
         &-buttons {
             overflow: scroll;
