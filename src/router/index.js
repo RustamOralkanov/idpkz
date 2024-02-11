@@ -9,6 +9,13 @@ import FavoriteView from "../views/Favorite/FavoriteView.vue";
 import PaymentView from "../views/Payment/PaymentView.vue";
 import SuccessView from "../views/Success/SuccessView.vue";
 import AuthView from "../views/Auth/AuthView.vue";
+import PagesView from "../views/Pages/PagesView.vue";
+import UserView from "../views/User/UserView.vue";
+import NewsView from "../views/News/NewsView.vue";
+
+import DeliveryPage from "../components/Page/Delivery.vue";
+import MyProfile from "../components/User/MyProfile.vue";
+import UserCart from "../components/User/UserCart.vue";
 
 Vue.use(VueRouter);
 
@@ -72,6 +79,104 @@ const router = new VueRouter({
             path: "/auth",
             name: "auth",
             component: AuthView,
+            meta: {
+                breadcrumb: "Профиль",
+            },
+        },
+        {
+            path: "/user",
+            name: "user",
+            component: UserView,
+            meta: {
+                breadcrumb: "Личный кабинет",
+            },
+            children: [
+                {
+                    path: "profile",
+                    component: MyProfile,
+                    meta: {
+                        breadcrumb: "Мои данные",
+                    },
+                },
+                {
+                    path: "purchases",
+                    component: UserCart,
+                    meta: {
+                        breadcrumb: "Покупки",
+                    },
+                },
+                {
+                    path: "favorites",
+                    component: UserCart,
+                    meta: {
+                        breadcrumb: "Избранное",
+                    },
+                },
+                {
+                    path: "recently",
+                    component: UserCart,
+                    meta: {
+                        breadcrumb: "Недавние",
+                    },
+                },
+            ],
+        },
+        {
+            path: "/page",
+            name: "page",
+            component: PagesView,
+            children: [
+                {
+                    path: "delivery",
+                    component: DeliveryPage,
+                    meta: {
+                        breadcrumb: "Доставка и Оплата",
+                    },
+                },
+                {
+                    path: "guarantee",
+                    component: DeliveryPage,
+                    meta: {
+                        breadcrumb: "Гарантия и возврат",
+                    },
+                },
+                {
+                    path: "news",
+                    component: DeliveryPage,
+                    meta: {
+                        breadcrumb: "Новости",
+                    },
+                },
+                {
+                    path: "sale",
+                    component: DeliveryPage,
+                    meta: {
+                        breadcrumb: "Распродажа",
+                    },
+                },
+                {
+                    path: "contacts",
+                    component: DeliveryPage,
+                    meta: {
+                        breadcrumb: "Контакты",
+                    },
+                },
+                {
+                    path: "legal",
+                    component: DeliveryPage,
+                    meta: {
+                        breadcrumb: "Юридическим лицам",
+                    },
+                },
+            ],
+        },
+        {
+            path: "/news",
+            name: "news",
+            component: NewsView,
+            meta: {
+                breadcrumb: "Новости",
+            },
         },
     ],
 });

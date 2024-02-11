@@ -46,9 +46,9 @@
                     <h5 class="footer-title">{{ footer.navigation.title }}</h5>
                     <ul class="footer-list">
                         <li class="footer-list-item" v-for="(link, index) in footer.navigation.links" :key="index">
-                            <a :href="link.link">
+                            <router-link :to="link.link">
                                 {{ link.name }}
-                            </a>
+                            </router-link>
                         </li>
                     </ul>
                 </div>
@@ -56,9 +56,9 @@
                     <h5 class="footer-title">{{ footer.useful.title }}</h5>
                     <ul class="footer-list">
                         <li class="footer-list-item" v-for="(link, index) in footer.useful.links" :key="index">
-                            <a :href="link.link">
+                            <router-link :to="link.link">
                                 {{ link.name }}
-                            </a>
+                            </router-link>
                         </li>
                         <li class="footer-list-item status">
                             <ClockIcon :width="18" :height="18" fill="white" />

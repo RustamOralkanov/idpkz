@@ -1,8 +1,9 @@
 <template>
     <section class="main">
         <div class="container">
+            <Breadcrumbs />
             <div class="row">
-                <div class="col-4 offset-4">
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-8 offset-xxl-4 offset-xl-3 offset-lg-3 offset-md-2">
                     <form class="main-wrapper">
                         <h2 class="main-title">Авторизация
                         </h2>
@@ -23,7 +24,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-4 offset-4">
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 offset-xxl-4 offset-xl-3 offset-lg-3 offset-md-2">
 
                     <form class="main-wrapper">
                         <h2 class="main-title main-reg-title">Регистрация
@@ -69,16 +70,20 @@
 </template>
 
 <script>
+import Breadcrumbs from '@/components/Breadcrumbs.vue';
 export default {
-
+    name: 'AuthView',
+    components: {
+        Breadcrumbs,
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 .main {
-    padding: 160px 0 60px;
 
     &-wrapper {
+        margin: 100px 0 0px;
         background-color: $white;
         border-radius: $radius;
         padding: 16px;
@@ -185,6 +190,15 @@ export default {
                 border-radius: $radius;
                 background-color: $white;
             }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .main {
+
+        &-title {
+            font-size: 24px;
         }
     }
 }

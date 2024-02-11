@@ -46,12 +46,12 @@
                             </button>
                         </div>
                     </router-link>
-                    <a href="#" class="nav-link">
+                    <router-link to="/auth" class="nav-link">
                         <div class="nav-link-body">
                             <UserIcon />
                             <h5 class="nav-link-title">Профиль</h5>
                         </div>
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>

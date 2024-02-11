@@ -5,7 +5,8 @@ export const useFooterStore = defineStore("footer", {
         return {
             contacts: {
                 title: "Контакты",
-                address: "г.Алматы, Макатаева 117 А, БЦ 'Лотос' 519 офис",
+                address:
+                    "г.Алматы, Макатаева 117 А, БЦ 'Лотос' 519 офис",
                 phone: "+7 (727) 313 21 30",
                 mail_one: "shop@idp.kz",
                 mail_two: "zakaz@idp.kz",
@@ -21,27 +22,27 @@ export const useFooterStore = defineStore("footer", {
                 links: [
                     {
                         name: "Главная",
-                        link: "#",
+                        link: "/",
                     },
                     {
                         name: "Доставка и оплата",
-                        link: "#",
+                        link: "/page/delivery",
                     },
                     {
                         name: "Гарантия и возврат",
-                        link: "#",
+                        link: "/page/guarantee",
                     },
                     {
                         name: "Юридическим лицам",
-                        link: "#",
+                        link: "/page/legal",
                     },
                     {
                         name: "Распродажа",
-                        link: "#",
+                        link: "/page/sale",
                     },
                     {
                         name: "Контакты",
-                        link: "#",
+                        link: "/page/contacts",
                     },
                 ],
             },
@@ -50,19 +51,19 @@ export const useFooterStore = defineStore("footer", {
                 links: [
                     {
                         name: "Товары в сравнении",
-                        link: "#",
+                        link: "/",
                     },
                     {
                         name: "Избранные товары",
-                        link: "#",
+                        link: "/favorite",
                     },
                     {
                         name: "Новости",
-                        link: "#",
+                        link: "/",
                     },
                     {
                         name: "Авторизация лицам",
-                        link: "#",
+                        link: "/auth",
                     },
                 ],
             },

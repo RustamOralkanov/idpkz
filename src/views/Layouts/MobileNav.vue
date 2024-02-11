@@ -20,8 +20,8 @@
                         :stroke="$route.name === 'favorite' ? '#3ab54a' : 'black'" />
                     Избранное
                 </router-link>
-                <router-link to="/user" class="nav-mobile-item">
-                    <UserIcon :width="24" :height="24" :fill="$route.name === 'user' ? '#3ab54a' : 'black'" />
+                <router-link to="/auth" class="nav-mobile-item">
+                    <UserIcon :width="24" :height="24" :fill="$route.name === 'auth' ? '#3ab54a' : 'black'" />
                     Профиль
                 </router-link>
 
