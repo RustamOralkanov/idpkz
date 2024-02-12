@@ -5,8 +5,7 @@ export const useFooterStore = defineStore("footer", {
         return {
             contacts: {
                 title: "Контакты",
-                address:
-                    "г.Алматы, Макатаева 117 А, БЦ 'Лотос' 519 офис",
+                address: "г.Алматы, Макатаева 117 А, БЦ 'Лотос' 519 офис",
                 phone: "+7 (727) 313 21 30",
                 mail_one: "shop@idp.kz",
                 mail_two: "zakaz@idp.kz",
@@ -59,7 +58,7 @@ export const useFooterStore = defineStore("footer", {
                     },
                     {
                         name: "Новости",
-                        link: "/",
+                        link: "/news",
                     },
                     {
                         name: "Авторизация лицам",

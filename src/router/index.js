@@ -14,6 +14,7 @@ import UserView from "../views/User/UserView.vue";
 import NewsView from "../views/News/NewsView.vue";
 
 import DeliveryPage from "../components/Page/Delivery.vue";
+import ContactsPage from "../components/Page/Contacts.vue";
 import MyProfile from "../components/User/MyProfile.vue";
 import UserCart from "../components/User/UserCart.vue";
 
@@ -125,6 +126,9 @@ const router = new VueRouter({
             path: "/page",
             name: "page",
             component: PagesView,
+            meta: {
+                breadcrumb: "Информация",
+            },
             children: [
                 {
                     path: "delivery",
@@ -156,7 +160,7 @@ const router = new VueRouter({
                 },
                 {
                     path: "contacts",
-                    component: DeliveryPage,
+                    component: ContactsPage,
                     meta: {
                         breadcrumb: "Контакты",
                     },
